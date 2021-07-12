@@ -1,0 +1,98 @@
+.heroSection{
+    position: relative;
+    height: 500px !important;
+}
+
+.searchBar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchBar form{
+    width: 700px;
+    display: flex;
+}
+
+.searchBar form input{
+    padding: 16px 18px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.searchBar form button {
+    padding: 16px 18px;
+    background: #fff;
+    color: #333;
+    outline: none;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+#searchIcon{
+    color: #666;
+}
+ 
+.searchBarText h1{
+    color: #fff;
+    display: block;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .searchBar{
+        left: 30px;
+        right: 30px;
+        transform: translate(0, -50%);
+    }
+
+    .searchBar form{
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+   
+    .searchBar{
+        left: 30px;
+        right: 30px;
+        transform: translate(0, -50%);
+    }
+
+    .searchBar form{
+        width: 100%;
+    } 
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .searchBar form{
+        width: 700px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

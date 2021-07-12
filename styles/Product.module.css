@@ -1,0 +1,151 @@
+.productSection{
+    margin-top: 40px;
+}
+
+.typography{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.typography h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #333;
+
+}
+
+.product{
+    background: #fff;
+    border:  1px solid #f1f2f3;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.product .productName{
+    margin-top: 10px;
+    color: #444;
+    font-weight: 600;
+    font-size: 18px; 
+}
+
+.dec p{
+    font-size: 15px;
+    color: #444;
+}
+
+#detailsBtn{
+    background: #333;
+    color: #f1f2f3;
+    padding: 5px 25px ;
+    font-weight: 600 ;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#detailsBtn:hover{
+    transform: scale(1.1);
+}
+
+
+/* =========================== */
+
+.product_img{
+    width: 100%;
+    height: 420px;
+}
+
+.product_img_slider{
+    border-top: 1px solid #f1f2f3;
+    border-left: 1px solid #f1f2f3;
+    border-right: 1px solid #f1f2f3;
+}
+
+.slider_product .lightbox{
+    cursor: zoom-in;
+}
+
+.product_thumb{
+    border: 1px solid #f1f2f3;
+    width: 100%;
+    height: 120px;
+    cursor: pointer;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    color: #333 !important;
+    font-weight: 700;
+}
+
+.product_title{
+    margin: 20px 0;
+    padding-left: 5px;
+    padding-top: 15px;
+    border-bottom: 1px solid #f1f2f3;
+}
+
+.product_title h1{
+    color: #444;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.product_title p{
+    color: #444;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* ======= product price end ======= */
+
+.product_specification{
+    margin-top: 5rem;
+    background: #ecf0f3;
+}
+
+.product_name{
+    padding: 20px 0;
+}
+
+.product_name h2{
+    margin-left: 5px;
+    color: #444;
+    font-weight: 600;
+    font-size: 33px;
+}
+
+#table{
+    border-radius: 5px;
+    /* box-shadow: 2px 2px 2px #b8b9be, -2px -2px 2px #fff;
+    -webkit-box-shadow: 2px 2px 2px #b8b9be, -2px -2px 2px #fff;
+    -moz-box-shadow: 2px 2px 2px #b8b9be, -2px -2px 2px #fff; */
+}
+
+#middle{
+    vertical-align: middle;
+}
+
+#imgmaddle{
+    vertical-align: middle;
+}
+
+.th{
+   font-size: 18px;
+   color: #444;
+   font-weight: 600;
+}
+
+.spec_title{
+    font-weight: 600;
+    color: #444;
+    padding: 10px;
+    width: 160px;
+    vertical-align: middle;
+}
+
+.spec_value{
+    color: #666;
+}
