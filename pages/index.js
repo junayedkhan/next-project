@@ -63,7 +63,7 @@ export default function Home({products}) {
 }
 
 export const getServerSideProps = async() => {
-  const res = await fetch(`http://localhost:3000/api/products`)
+  const res = await fetch(`https://next-project-app.herokuapp.com/api/products`)
   const products = await res.json()
 
   return{
