@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import baseUrl from '../server/baseUrl'
 import Hero from "../component/Hero"
 import Button from '@material-ui/core/Button';
 import img from "../public/1619402399637.png"
@@ -63,7 +64,7 @@ export default function Home({products}) {
 }
 
 export const getServerSideProps = async() => {
-  const res = await fetch(`https://next-project-app.herokuapp.com/api/products`)
+  const res = await fetch(`${baseUrl}/api/products`)
   const products = await res.json()
 
   return{
