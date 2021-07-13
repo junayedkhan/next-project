@@ -37,7 +37,7 @@ const index = ({products}) => {
                                 </div>
                                 <div className="text-center">
                                     <Link href={`/products/[id]`} as={`/products/${_id}`}>
-                                        <a><Button id={style.detailsBtn}>view Details</Button></a>
+                                        <a><Button id={style.actinBtn}>view Details</Button></a>
                                     </Link>
                                 </div>
                             </div>
