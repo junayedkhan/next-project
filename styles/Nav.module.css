@@ -7,7 +7,9 @@
 }
 
 #active{
-    background: #222;
+    background: #333;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .navlogo {
@@ -76,7 +78,7 @@
         left: -100%;
         top:0;
         flex-direction: column;
-        background: #222;
+        background: #333;
         width: 100%;
         padding-top: 80px;
         padding-bottom: 20px;
