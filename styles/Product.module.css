@@ -124,6 +124,18 @@
     color: #fff;
 }
 
+#actinBtn{
+   background: #333; 
+   color: #fff;
+   font-weight: 600;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+
+#actinBtn:hover{
+    transform: scale(1.1);
+}
+
 #middle{
     vertical-align: middle;
     font-weight: 600;

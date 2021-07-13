@@ -2,6 +2,7 @@ import baseUrl from "../../server/baseUrl"
 import Image from 'next/image'
 import img01 from "../../public/wp7771146.webp"
 import img02 from "../../public/Untitled-2.png"
+import Button from '@material-ui/core/Button';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/components/zoom/zoom.min.css"
 import "swiper/components/navigation/navigation.min.css"
@@ -69,40 +70,41 @@ const id = ({data}) => {
                             <h1>{data.name}</h1>
                             <p>offical</p>
                         </div>
-                        <div className={style.product_price}>
+                        <div className="table-responsive">
                             <table id={style.table} className="table table-hover text-center">
                                 <thead className={style.thead}>
                                     <tr>
-                                        <th>RAM/ROM</th>
-                                        <th>4/64GB</th>
-                                        <th>6/64GB</th>
-                                        <th>8/128GB</th>
+                                        <th id={style.middle}>RAM/ROM</th>
+                                        <th id={style.middle}>4/64GB</th>
+                                        <th id={style.middle}>6/64GB</th>
+                                        <th id={style.middle}>8/128GB</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th>Bangladesh</th>
-                                        <td>20,000</td>
-                                        <td>20,000</td>
-                                        <td>20,000</td>
+                                        <th id={style.middle}>Bangladesh</th>
+                                        <td id={style.middle}>20,000</td>
+                                        <td id={style.middle}>20,000</td>
+                                        <td id={style.middle}>20,000</td>
                                     </tr>
                                     <tr>
-                                        <th>India</th>
-                                        <td>20,000</td>
-                                        <td>20,000</td>
-                                        <td>20,000</td>
+                                        <th id={style.middle}>India</th>
+                                        <td id={style.middle}>20,000</td>
+                                        <td id={style.middle}>20,000</td>
+                                        <td id={style.middle}>20,000</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div className={style.affiliate_market}>
+                        <div className="table-responsive">
                             <table id={style.table} className="table table-hover text-center">
                                 <thead className={style.thead}>
                                     <tr>
-                                        <th>RAM/ROM</th>
-                                        <th>4/64GB</th>
-                                        <th>6/64GB</th>
-                                        <th>8/128GB</th>
+                                        <th id={style.middle}>RAM/ROM</th>
+                                        <th id={style.middle}>4/64GB</th>
+                                        <th id={style.middle}>6/64GB</th>
+                                        <th id={style.middle}>8/128GB</th>
+                                        <th id={style.middle}>BAY NOW</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -112,18 +114,17 @@ const id = ({data}) => {
                                             <tr key={index}>
                                                 <th id={style.middle}><Image src={val.src} id={style.imgmaddle} width="100%" height="30px" alt="product"/></th>
                                                 <td id={style.middle}>
-                                                    <Link href={val.link}>
-                                                        <a>{val.GB464}</a>
-                                                    </Link>
+                                                {val.GB464}
+                                                </td>
+                                                <td id={style.middle}>
+                                                {val.GB664}
+                                                </td>
+                                                <td id={style.middle}>
+                                                {val.GB8128}
                                                 </td>
                                                 <td id={style.middle}>
                                                     <Link href={val.link}>
-                                                        <a>{val.GB664}</a>
-                                                    </Link>
-                                                </td>
-                                                <td id={style.middle}>
-                                                    <Link href={val.link}>
-                                                        <a>{val.GB8128}</a>
+                                                        <a><Button id={style.actinBtn}>bay</Button></a>
                                                     </Link>
                                                 </td>
                                             </tr>
