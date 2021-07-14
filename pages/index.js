@@ -14,7 +14,6 @@ export default function Home({products}) {
         <title>Home</title>
         <meta name="description" content="mobile price, mobile price in bd, mobile price in bangladesh mobile price in india" />
       </Head>
-
       <section className={style.productSection}>
         <div className={style.typography}>
           <h1>New Arrivals</h1>
@@ -57,7 +56,7 @@ export default function Home({products}) {
   )
 }
 
-export const getStaticProps = async() => {
+export const getServerSideProps = async() => {
   const res = await fetch(`${baseUrl}/api/products`)
   const products = await res.json()
 

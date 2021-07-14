@@ -15,12 +15,12 @@
     align-items: center;
 }
 
-.searchBar form{
+.searchBar .form{
     width: 700px;
     display: flex;
 }
 
-.searchBar form input{
+.searchBar .form input{
     padding: 16px 18px;
     width: 100%;
     outline: none;
@@ -28,7 +28,7 @@
     border-radius: 5px 0 0 5px;
 }
 
-.searchBar form button {
+.searchBar .form button {
     padding: 16px 18px;
     background: #fff;
     color: #333;
@@ -52,6 +52,46 @@
 
 }
 
+.position{
+    position: relative;
+}
+
+.searchList{
+    background: #fff;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    height: 300px;
+    overflow-x: scroll;
+}
+
+.active{
+   display: none;
+}
+
+.searchList .searchItem{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333
+}
+
+.searchItemImg{
+    padding: 0 30px;
+}
+
+.searchItemText{
+    padding: 0 10px;
+}
+
+.searchItemText p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -62,7 +102,7 @@
         transform: translate(0, -50%);
     }
 
-    .searchBar form{
+    .searchBar .form{
         width: 100%;
     }
 }
@@ -76,15 +116,16 @@
         transform: translate(0, -50%);
     }
 
-    .searchBar form{
+    .searchBar .form{
         width: 100%;
     } 
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
-    .searchBar form{
+    .searchBar .form{
         width: 700px;
     }
 }

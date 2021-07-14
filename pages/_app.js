@@ -24,8 +24,8 @@ function MyApp({ Component, pageProps }) {
     <div className="sticky-top">
       {loading && <Progress />}
     </div>
-
-    <Layout>
+    
+      <Layout>
       <Component {...pageProps} />
     </Layout>
     </>
