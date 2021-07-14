@@ -17,7 +17,6 @@ const index = ({brands}) => {
                                         <div className={style.brand}>
                                             <div className={style.brandName}>
                                                 <span>{val}</span>
-                                                {/* <Image src={img03} alt="brands" /> */}
                                             </div>
                                         </div>
                                     </a>
