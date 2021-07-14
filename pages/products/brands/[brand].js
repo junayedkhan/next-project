@@ -35,7 +35,7 @@ const brand = ({brands}) => {
                                     <p>{dec}</p>
                                 </div>
                                 <div className="text-center">
-                                    <Link href={`/products/[id]`} as={`/products/${name}`}>
+                                    <Link href={`/products/[id]`} as={`/products/${_id}`}>
                                         <a><Button id={style.actinBtn}>view Details</Button></a>
                                     </Link>
                                 </div>
