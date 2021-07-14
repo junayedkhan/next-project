@@ -12,6 +12,7 @@ const Nav = () => {
         {href: "/", name: "Home"},
         {href: "/products", name: "products"},
         {href: "/products/brands", name: "Brands"},
+        {href: "/", name: "news & reviews"},
     ]
 
     const scrollHandle = () => {

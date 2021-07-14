@@ -36,7 +36,7 @@ const index = ({products}) => {
                                     <p>{dec}</p>
                                 </div>
                                 <div className="text-center">
-                                    <Link href={`/products/[id]`} as={`/products/${_id}`}>
+                                    <Link href={`/products/[id]`} as={`/products/${name}`}>
                                         <a><Button id={style.actinBtn}>view Details</Button></a>
                                     </Link>
                                 </div>

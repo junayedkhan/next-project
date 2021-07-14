@@ -1,0 +1,15 @@
+.brand{
+    margin-top: 20px;
+    background: #fff;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.brand .brandName span {
+    font-size: 50px;
+    color: #333;
+    font-weight: 600;
+}
