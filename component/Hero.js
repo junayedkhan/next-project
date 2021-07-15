@@ -13,6 +13,7 @@ const Hero = () => {
   const [input, setInput] = useState('');
   const [products, setProducts] = useState();
   const [List, setList] = useState([]);
+  const [isMobile, setMobile] = useState(false)
 
   const fetchData = async () => {
     return await fetch(`${baseUrl}/api/products`)
@@ -36,7 +37,7 @@ const Hero = () => {
   return (
     <>
     <section className={style.heroSection}>
-        <Image src={img} alt=""  layout="fill"/>
+        <Image src={img} alt="hero"  layout="fill"/>
 
     <div className={style.searchBar}>
       <div className={style.position}>
@@ -59,13 +60,14 @@ const Hero = () => {
             return(
               <>
               <Link href={`/products/[id]`} as={`/products/${val._id}`}>
-                <a>
+                <a >
                   <li className={style.searchItem} key={index}>
                     <div className={style.searchItemImg}>
-                      <Image src={img01} width={80} height={80} alt="product"/>
+                      <Image src={img01} width={80} height={80} alt={val.name}/>
                     </div>
                     <div className={style.searchItemText}>
                       <p>{val.name}</p>
+                      <p>{val.dec}</p>
                     </div>
                   </li>
                 </a>
