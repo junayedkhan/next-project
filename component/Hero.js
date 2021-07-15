@@ -7,8 +7,6 @@ import style from "../styles/Hero.module.css"
 import { useState, useEffect } from 'react';
 
 
-
-
 const Hero = () => {
 
   const [input, setInput] = useState('');
@@ -21,6 +19,7 @@ const Hero = () => {
     return await fetch('http://localhost:3000/api/products')
       .then(response => response.json())
       .then(data => {
+         setList(data)
          setProducts(data)
        });}
 
@@ -31,7 +30,6 @@ const Hero = () => {
        })
        setInput(input);
        setList(filtered);
-    
   }
 
   useEffect( () => {fetchData()},[]);
