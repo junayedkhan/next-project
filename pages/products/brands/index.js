@@ -6,6 +6,9 @@ const index = ({brands}) => {
     return (
         <>
         <section className={style.brandsSection}>
+            <div className={style.typography}>
+                <h1>All Brands</h1>
+            </div>
             <div className="container">
                 <div className="row">
                     {brands.map((val, index) => {

@@ -14,11 +14,19 @@ const data = async(req, res) => {
     }
 }
 
-    const getallProducts = async (req,res)=>{
+    const getallProducts = async (req,res,next)=>{
+      const curPage = req.query.page || 1
+      const perPage = 12
         try{
           const products =  await productModel.find()
-          products.reverse()
-          res.status(200).json(products)
+          .skip((curPage - 1) * perPage)
+          .limit(perPage)
+          const totalProduct = await productModel.find().countDocuments()
+          res.status(200).json({
+            products: products,
+            curPage: curPage,
+            maxPage: Math.ceil(totalProduct / perPage),
+          })
         }catch(err){
           console.log(err)
         }

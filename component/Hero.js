@@ -42,12 +42,12 @@ const Hero = () => {
     <div className={style.searchBar}>
       <div className={style.position}>
         <div className={style.searchBarText}>
-            <h1>Lorem ipsum dolor sit amet</h1>
+            <h1>Search your product name</h1>
         </div>
         <div className={style.form}>
             <input
             type="search"
-            placeholder="Search for anything"
+            placeholder="Search"
             onChange={updateInput}
             value={input}
             />
@@ -56,12 +56,12 @@ const Hero = () => {
 
         {input ? (
           <ul className={style.searchList}> 
-          {List.map((val, index) => {
+          {List.map((val) => {
             return(
               <>
               <Link href={`/products/[id]`} as={`/products/${val._id}`}>
                 <a >
-                  <li className={style.searchItem} key={index}>
+                  <li className={style.searchItem} key={val._id}>
                     <div className={style.searchItemImg}>
                       <Image src={img01} width={80} height={80} alt={val.name}/>
                     </div>

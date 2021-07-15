@@ -1,16 +1,18 @@
 .productSection{
-    margin-top: 40px;
+    
 }
 
 .typography{
     text-align: center;
     margin-bottom: 30px;
+    padding: 10px 0;
+    background: #333;
 }
 
 .typography h1{
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 700;
-    color: #333;
+    color: #fff;
 
 }
 
@@ -38,6 +40,7 @@
 }
 
 #actinBtn{
+    margin-top: 5px;
     background: #333;
     color: #f1f2f3;
     padding: 5px 25px ;
@@ -50,6 +53,74 @@
     transform: scale(1.1);
 }
 
+.paginate{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    margin-bottom: 5rem;
+}
+
+.paginateContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+.paginateLi{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 5px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.paginateLi:hover{
+    background: #fff;
+    color: #333;
+}
+
+.paginateLink{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.activePaginate{
+    background: #fff;
+    color: #333;
+}
+
+.paginatePrev{
+    margin-right: 40px;
+    color: #fff;
+    font-weight: 600;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.paginateNext{
+    margin-left: 40px;
+    color: #fff;
+    font-weight: 600;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.paginatePrev:hover{
+    background: #fff;
+    color: #333;
+}
+
+.paginateNext:hover{
+    background: #fff;
+    color: #333;
+}
 
 /* =========================== */
 
