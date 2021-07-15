@@ -2,6 +2,7 @@ import Image from 'next/image'
 import img from "../public/pexels-arun-thomas-5878303.jpg"
 import SearchIcon from '@material-ui/icons/Search';
 import img01 from "../public/1619402399637.png"
+import baseUrl from "../server/baseUrl"
 import Link from 'next/link'
 import style from "../styles/Hero.module.css"
 import { useState, useEffect } from 'react';
@@ -12,11 +13,9 @@ const Hero = () => {
   const [input, setInput] = useState('');
   const [products, setProducts] = useState();
   const [List, setList] = useState([]);
-  const [view, setView] = useState(false)
-  const openMenu= ()=> setView(!view);
 
   const fetchData = async () => {
-    return await fetch('http://localhost:3000/api/products')
+    return await fetch(`${baseUrl}/api/products`)
       .then(response => response.json())
       .then(data => {
          setList(data)
@@ -33,8 +32,6 @@ const Hero = () => {
   }
 
   useEffect( () => {fetchData()},[]);
-
-  console.log(List);
 
   return (
     <>
