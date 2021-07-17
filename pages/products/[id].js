@@ -104,7 +104,7 @@ const id = ({data}) => {
                                         <th id={style.middle}>4/64GB</th>
                                         <th id={style.middle}>6/64GB</th>
                                         <th id={style.middle}>8/128GB</th>
-                                        <th id={style.middle}>BAY NOW</th>
+                                        <th id={style.middle}>BUY NOW</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -124,7 +124,7 @@ const id = ({data}) => {
                                                 </td>
                                                 <td id={style.middle}>
                                                     <Link href={val.link}>
-                                                        <a><Button id={style.actinBtn}>bay</Button></a>
+                                                        <a><Button id={style.actinBtn}>buy</Button></a>
                                                     </Link>
                                                 </td>
                                             </tr>

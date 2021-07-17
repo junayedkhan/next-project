@@ -16,7 +16,7 @@ const Hero = () => {
   const [isMobile, setMobile] = useState(false)
 
   const fetchData = async () => {
-    return await fetch(`${baseUrl}/api/products`)
+    return await fetch(`${baseUrl}/api/search`)
       .then(response => response.json())
       .then(data => {
          setList(data)
@@ -56,12 +56,12 @@ const Hero = () => {
 
         {input ? (
           <ul className={style.searchList}> 
-          {List.map((val) => {
+          {List.map((val, index) => {
             return(
               <>
               <Link href={`/products/[id]`} as={`/products/${val._id}`}>
-                <a >
-                  <li className={style.searchItem} key={val._id}>
+                <a key={index}>
+                  <li className={style.searchItem}>
                     <div className={style.searchItemImg}>
                       <Image src={img01} width={80} height={80} alt={val.name}/>
                     </div>

@@ -6,8 +6,6 @@ import Link from 'next/link'
 import Button from '@material-ui/core/Button';
 import img from "../public/1619402399637.png"
 import style from "../styles/Product.module.css"
-import { Style } from "@material-ui/icons"
-
 
 const ProductList = ({ products }) => {
   const [prodcuts, setProdcuts] = useState([])
@@ -38,6 +36,8 @@ const ProductList = ({ products }) => {
       <section className={style.productSection}>
         <div className={style.typography}>
           <h1>New Arrivals</h1>
+        </div>
+        <div> 
         </div>
         <div className="container">
         <div className="row">

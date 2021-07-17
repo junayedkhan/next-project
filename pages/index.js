@@ -9,8 +9,6 @@ export default function Home({products}) {
     <section className="products">
       <ProdcutList products={products} />
     </section>
-
-
     </>
   )
 }
@@ -26,3 +24,5 @@ export const getServerSideProps = async({query}) => {
     }
   }
 }
+
+

@@ -10,7 +10,6 @@ const Nav = () => {
 
     const NavLink = [
         {href: "/", name: "Home"},
-        {href: "/products", name: "products"},
         {href: "/products/brands", name: "Brands"},
         {href: "/", name: "news & reviews"},
     ]
