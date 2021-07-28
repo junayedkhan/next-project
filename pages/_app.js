@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
       {loading && <Progress />}
     </div>
     
-      <Layout>
+    <Layout>
       <Component {...pageProps} />
     </Layout>
     </>

@@ -7,6 +7,8 @@ import img from "../../../public/1619402399637.png"
 import style from "../../../styles/Product.module.css"
 
 const brand = ({brands}) => {
+    console.log(brands);
+
     return (
         <>
         <Head>
@@ -15,9 +17,6 @@ const brand = ({brands}) => {
         </Head>
 
         <section className={style.productSection}>
-            <div className={style.typography}>
-            {/* <h1>All Brands</h1> */}
-            </div>
             <div className="container">
             <div className="row">
                 {brands.map((props, index) => {
@@ -52,7 +51,7 @@ const brand = ({brands}) => {
 
 export const getServerSideProps = async(context) => {
     const brand = context.params.brand
-    const res = await fetch(`${baseUrl}/api/products/brands/${brand}`)
+    const res = await fetch(`${baseUrl}/api/products/brands/${brand}?page=1`)
     const brands = await res.json()
 
     return{

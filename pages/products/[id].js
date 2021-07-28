@@ -37,112 +37,119 @@ const id = ({data}) => {
         <>
         <main>
         <section className={style.product_into}>
-        <div className="container">
+        <div className="container-fluid">
             <div className="row">
+                <div className="col-lg-8">
+                <div className="row">
 
-                <div className="col-lg-6 col-md-6 col-sm-12">
-                    <div className={style.prodcutImg}>
-                    <Swiper
-                    zoom={true}
-                    className="mySwiper"
-                    style={{'--swiper-navigation-color': '#333','--swiper-pagination-color': '#333'}}
-                    navigation={true}
-                    pagination={{"clickable": true}}
-                    >
-                    {sliderImg.map((val, index) => {
-                        return(
-                            <>
-                            <SwiperSlide key={index}>
-                                <div className="swiper-zoom-container">
-                                    <Image src={val.src} alt={val.alt} height={450} />
-                                </div>
-                            </SwiperSlide>
-                            </>
-                        )
-                    })}
-                    </Swiper>
+                    <div className="col-lg-6 col-md-6 col-sm-12">
+                        <div className={style.prodcutImg}>
+                            <Swiper
+                                zoom={true}
+                                className="mySwiper"
+                                style={{'--swiper-navigation-color': '#333','--swiper-pagination-color': '#333'}}
+                                navigation={true}
+                                pagination={{"clickable": true}}
+                            >
+                            {sliderImg.map((val, index) => {
+                                return(
+                                    <>
+                                    <SwiperSlide key={index}>
+                                        <div className="swiper-zoom-container">
+                                            <Image src={val.src} alt={val.alt} height={450} />
+                                        </div>
+                                    </SwiperSlide>
+                                    </>
+                                )
+                            })}
+                            </Swiper>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-6 col-md-6 col-sm-12">
+                        <div className={style.product_details}>
+                            <div className={style.product_title}>
+                                <h1>{data.name}</h1>
+                                <p>offical</p>
+                            </div>
+                            <div className="table-responsive">
+                                <table id={style.table} className="table table-hover text-center">
+                                    <thead className={style.thead}>
+                                        <tr>
+                                            <th id={style.middle}>RAM/ROM</th>
+                                            <th id={style.middle}>4/64GB</th>
+                                            <th id={style.middle}>6/64GB</th>
+                                            <th id={style.middle}>8/128GB</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th id={style.middle}>Bangladesh</th>
+                                            <td id={style.middle}>20,000</td>
+                                            <td id={style.middle}>20,000</td>
+                                            <td id={style.middle}>20,000</td>
+                                        </tr>
+                                        <tr>
+                                            <th id={style.middle}>India</th>
+                                            <td id={style.middle}>20,000</td>
+                                            <td id={style.middle}>20,000</td>
+                                            <td id={style.middle}>20,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div className="table-responsive">
+                                <table id={style.table} className="table table-hover text-center">
+                                    <thead className={style.thead}>
+                                        <tr>
+                                            <th id={style.middle}>RAM/ROM</th>
+                                            <th id={style.middle}>4/64GB</th>
+                                            <th id={style.middle}>6/64GB</th>
+                                            <th id={style.middle}>8/128GB</th>
+                                            <th id={style.middle}>BUY NOW</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {afiliateMarket.map((val, index) => {
+                                            return(
+                                                <>
+                                                <tr key={index}>
+                                                    <th id={style.middle}><Image src={val.src} id={style.imgmaddle} width="100%" height="30px" alt="product"/></th>
+                                                    <td id={style.middle}>
+                                                    {val.GB464}
+                                                    </td>
+                                                    <td id={style.middle}>
+                                                    {val.GB664}
+                                                    </td>
+                                                    <td id={style.middle}>
+                                                    {val.GB8128}
+                                                    </td>
+                                                    <td id={style.middle}>
+                                                        <Link href={val.link}>
+                                                            <a><Button id={style.actinBtn}>buy</Button></a>
+                                                        </Link>
+                                                    </td>
+                                                </tr>
+                                                </>
+                                            )
+                                        })}
+                                    </tbody>
+                                </table>
+                            </div>  
+                        </div>
                     </div>
                 </div>
-    
-                <div className="col-lg-6 col-md-6 col-sm-12">
-                    <div className={style.product_details}>
-                        <div className={style.product_title}>
-                            <h1>{data.name}</h1>
-                            <p>offical</p>
-                        </div>
-                        <div className="table-responsive">
-                            <table id={style.table} className="table table-hover text-center">
-                                <thead className={style.thead}>
-                                    <tr>
-                                        <th id={style.middle}>RAM/ROM</th>
-                                        <th id={style.middle}>4/64GB</th>
-                                        <th id={style.middle}>6/64GB</th>
-                                        <th id={style.middle}>8/128GB</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th id={style.middle}>Bangladesh</th>
-                                        <td id={style.middle}>20,000</td>
-                                        <td id={style.middle}>20,000</td>
-                                        <td id={style.middle}>20,000</td>
-                                    </tr>
-                                    <tr>
-                                        <th id={style.middle}>India</th>
-                                        <td id={style.middle}>20,000</td>
-                                        <td id={style.middle}>20,000</td>
-                                        <td id={style.middle}>20,000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div className="table-responsive">
-                            <table id={style.table} className="table table-hover text-center">
-                                <thead className={style.thead}>
-                                    <tr>
-                                        <th id={style.middle}>RAM/ROM</th>
-                                        <th id={style.middle}>4/64GB</th>
-                                        <th id={style.middle}>6/64GB</th>
-                                        <th id={style.middle}>8/128GB</th>
-                                        <th id={style.middle}>BUY NOW</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {afiliateMarket.map((val, index) => {
-                                        return(
-                                            <>
-                                            <tr key={index}>
-                                                <th id={style.middle}><Image src={val.src} id={style.imgmaddle} width="100%" height="30px" alt="product"/></th>
-                                                <td id={style.middle}>
-                                                {val.GB464}
-                                                </td>
-                                                <td id={style.middle}>
-                                                {val.GB664}
-                                                </td>
-                                                <td id={style.middle}>
-                                                {val.GB8128}
-                                                </td>
-                                                <td id={style.middle}>
-                                                    <Link href={val.link}>
-                                                        <a><Button id={style.actinBtn}>buy</Button></a>
-                                                    </Link>
-                                                </td>
-                                            </tr>
-                                            </>
-                                        )
-                                    })}
-                                </tbody>
-                            </table>
-                        </div>  
-                    </div>
-                </div>
-    
             </div>
+                <div className="col-lg-4">
+                    
+                </div>
+            </div>
+
         </div>
         </section>
 
         <section className={style.product_specification}>
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-8">
                         <div className={style.product_name}>

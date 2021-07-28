@@ -39,7 +39,7 @@ const ProductList = ({ products }) => {
         </div>
         <div> 
         </div>
-        <div className="container">
+        <div className="">
         <div className="row">
             {prodcuts.map((props, index) => {
                 const{_id, name, dec, brand} = props
@@ -57,7 +57,7 @@ const ProductList = ({ products }) => {
                             </div>
                             <div className="text-center">
                                 <Link href={`/products/[id]`} as={`/products/${_id}`}>
-                                    <a><Button id={style.actinBtn}>view Details</Button></a>
+                                    <a><Button id={style.actinBtn}>view</Button></a>
                                 </Link>
                             </div>
                         </div>

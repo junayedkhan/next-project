@@ -10,10 +10,9 @@ import { useState, useEffect } from 'react';
 
 const Hero = () => {
 
-  const [input, setInput] = useState('');
+  const [inputs, setInputs] = useState('');
   const [products, setProducts] = useState();
   const [List, setList] = useState([]);
-  const [isMobile, setMobile] = useState(false)
 
   const fetchData = async () => {
     return await fetch(`${baseUrl}/api/search`)
@@ -21,14 +20,15 @@ const Hero = () => {
       .then(data => {
          setList(data)
          setProducts(data)
-       });}
+      }
+  )}
 
   const updateInput = async (e) => {
     const input = e.target.value
       const filtered = products.filter(val => {
         return val.name.toLowerCase().includes(input.toLowerCase())
        })
-       setInput(input);
+       setInputs(input);
        setList(filtered);
   }
 
@@ -49,12 +49,12 @@ const Hero = () => {
             type="search"
             placeholder="Search"
             onChange={updateInput}
-            value={input}
+            value={inputs}
             />
             <button ><SearchIcon id={style.searchIcon} /></button>
         </div>
 
-        {input ? (
+        {inputs ? (
           <ul className={style.searchList}> 
           {List.map((val, index) => {
             return(

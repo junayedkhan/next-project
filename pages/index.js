@@ -2,6 +2,7 @@ import baseUrl from '../server/baseUrl'
 import ProdcutList from "../component/ProductList"
 
 
+
 export default function Home({products}) {
 
   return (
